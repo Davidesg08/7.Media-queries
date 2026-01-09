@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;                /* Permite que los divs salten de línea */
+    justify-content: space-between; /* Distribuye el espacio sobrante entre elementos */
+    background-color:moccasin;
+}
+
+.item {
+    background-color:navy;
+    color: white;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10px;           /* Separación vertical */
+    box-sizing: border-box;        /* Importante para que el padding no rompa el % */
+}
+
+/* 1. MÓVIL: 100% de ancho */
+@media (min-width: 0px) {
+    .item {
+        width: 100%;
+    }
+}
+
+/* 2. TABLET: 50% de ancho */
+/* Usamos 49% o similar para dejar aire */
+@media (min-width: 768px) {
+    .item {
+        width: 49%;
+    }
+}
+
+/* 3. MONITOR GRANDE: 33% de ancho */
+@media (min-width: 1200px) {
+    .item {
+        width: 32%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <section id="nuestros-proyectos">
+        <h1 class="titulo">Nuestros proyectos</h1>
+        <div class="contenedor">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+        </div>
+    </section>
+</body>
+</html>
